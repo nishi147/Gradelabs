@@ -4,24 +4,51 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Play, Film, Camera, ShoppingBag } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
-type Cat = "all" | "real-estate" | "ecommerce" | "cinematic";
+type Cat = "all" | "ecommerce" | "cinematic" | "short-form";
 
-const projects: { title: string; cat: Exclude<Cat, "all">; desc: string; icon: any; tone: string }[] = [
-  { title: "Hilltop Residences", cat: "real-estate", desc: "Cinematic pitch reel for a luxury hillside development.", icon: Camera, tone: "from-zinc-700 to-zinc-900" },
-  { title: "Coastal Estates", cat: "real-estate", desc: "Aerial + interior walkthrough for beachfront property launch.", icon: Camera, tone: "from-sky-900/40 to-zinc-900" },
-  { title: "Urban Lofts Pitch", cat: "real-estate", desc: "Boutique developer reel showcasing four city apartments.", icon: Camera, tone: "from-zinc-800 to-black" },
-  { title: "Lumera Skincare", cat: "ecommerce", desc: "Full e-commerce transformation: imagery, listings and storefront.", icon: ShoppingBag, tone: "from-amber-900/40 to-zinc-900" },
-  { title: "Aether Watches", cat: "cinematic", desc: "Cinematic product film shot on Alexa Mini with macro detail work.", icon: Film, tone: "from-zinc-800 to-black" },
-  { title: "Northwind Coffee", cat: "ecommerce", desc: "Marketplace product transformation across 28 SKUs.", icon: ShoppingBag, tone: "from-orange-900/30 to-zinc-900" },
-  { title: "Obsidian Fragrance", cat: "cinematic", desc: "Slow-motion bottle hero shoot with custom lighting design.", icon: Film, tone: "from-zinc-900 to-black" },
-  { title: "Vantage Audio", cat: "cinematic", desc: "Studio product film for a high-end speaker manufacturer.", icon: Film, tone: "from-zinc-700 to-zinc-900" },
+const projects: { title: string; cat: Exclude<Cat, "all">; desc: string; icon?: any; tone?: string; video?: string }[] = [
+  { 
+    title: "The 400 Roti Startup", 
+    cat: "short-form", 
+    desc: "Strategic podcast production for Purbi Podcast, focused on storytelling and high-retention editing.", 
+    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922369/01_-_Purbi_Podcast_-_The_400_Roti_Startup_tidhon.mp4",
+    tone: "from-zinc-800 to-black"
+  },
+  { 
+    title: "Employment & Scaling", 
+    cat: "short-form", 
+    desc: "Deep-dive podcast episode management with professional audio mixing and multicam grading.", 
+    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922320/02_-_Purbi_Podcast_-_Employment_and_Scaling_g6iku5.mp4",
+    tone: "from-zinc-700 to-zinc-900"
+  },
+  { 
+    title: "Regional Pride Animations", 
+    cat: "cinematic", 
+    desc: "Custom map animations and motion graphics for regional storytelling.", 
+    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922276/05_-_Purbi_Podcast_-_Regional_Pride_Map_Animations_fhwlkm.mp4",
+    tone: "from-sky-900/40 to-zinc-900"
+  },
+  { 
+    title: "EduCollege AI Monster", 
+    cat: "ecommerce", 
+    desc: "AI-driven commercial video for educational tech platforms.", 
+    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922220/EduCollege_Ai_video_monster_cip5iw.mp4",
+    tone: "from-zinc-800 to-black"
+  },
+  { 
+    title: "Tsuyosa UGC Reel", 
+    cat: "ecommerce", 
+    desc: "High-converting UGC short-form content for global DTC brands.", 
+    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922068/UGC_Tsuyosa_REEL_trg0qp.mp4",
+    tone: "from-amber-900/40 to-zinc-900"
+  },
 ];
 
 const filters: { id: Cat; label: string }[] = [
   { id: "all", label: "All work" },
-  { id: "real-estate", label: "Real Estate Pitch Reels" },
   { id: "ecommerce", label: "E-commerce Transformations" },
   { id: "cinematic", label: "Cinematic Product Shoots" },
+  { id: "short-form", label: "Short-form & Content" },
 ];
 
 const Portfolio = () => {
@@ -80,13 +107,24 @@ const Portfolio = () => {
                 >
                   {/* Visual placeholder */}
                   <div className={`relative aspect-[4/5] bg-gradient-to-br ${p.tone} overflow-hidden rounded-sm mb-4 border border-border`}>
-                    <motion.div
-                      className="absolute inset-0 flex items-center justify-center"
-                      whileHover={{ scale: 1.04 }}
-                      transition={{ duration: 0.7 }}
-                    >
-                      <p.icon className="h-12 w-12 text-foreground/40" strokeWidth={1.2} />
-                    </motion.div>
+                    {p.video ? (
+                      <video
+                        src={p.video}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                    ) : (
+                      <motion.div
+                        className="absolute inset-0 flex items-center justify-center"
+                        whileHover={{ scale: 1.04 }}
+                        transition={{ duration: 0.7 }}
+                      >
+                        {p.icon && <p.icon className="h-12 w-12 text-foreground/40" strokeWidth={1.2} />}
+                      </motion.div>
+                    )}
                     {/* Hover overlay */}
                     <div className="absolute inset-0 bg-foreground/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                       <div>

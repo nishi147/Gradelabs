@@ -19,9 +19,11 @@ const testimonials = [
 ];
 
 const work = [
-  { tag: "Real Estate · Pitch Reel", title: "Hilltop Residences" },
-  { tag: "E-commerce · Transformation", title: "Lumera Skincare" },
-  { tag: "Cinematic · Product Shoot", title: "Aether Watches" },
+  { tag: "Podcast · Storytelling", title: "The 400 Roti Startup", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922369/01_-_Purbi_Podcast_-_The_400_Roti_Startup_tidhon.mp4" },
+  { tag: "DTC · UGC Reel", title: "Tsuyosa Skincare", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922068/UGC_Tsuyosa_REEL_trg0qp.mp4" },
+  { tag: "Motion · Pride Reel", title: "Regional Pride Animations", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922276/05_-_Purbi_Podcast_-_Regional_Pride_Map_Animations_fhwlkm.mp4" },
+  { tag: "Edu-Tech · Commercial", title: "EduCollege AI Monster", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922220/EduCollege_Ai_video_monster_cip5iw.mp4" },
+  { tag: "Podcast · Production", title: "Employment & Scaling", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922320/02_-_Purbi_Podcast_-_Employment_and_Scaling_g6iku5.mp4" },
 ];
 
 const Home = () => {
@@ -181,14 +183,27 @@ const Home = () => {
               <Reveal key={i} delay={i * 0.1}>
                 <Link to="/portfolio" className="group block">
                   <div className="aspect-[3/4] surface-soft rounded-sm overflow-hidden relative mb-4 border border-border">
-                    <div className={`absolute inset-0 bg-gradient-to-br ${
-                      i === 0 ? "from-zinc-700 to-zinc-900" :
-                      i === 1 ? "from-amber-900/40 to-zinc-900" :
-                      "from-zinc-800 to-black"
-                    } group-hover:scale-105 transition-transform duration-700`} />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Film className="h-10 w-10 text-foreground/30" strokeWidth={1.2} />
-                    </div>
+                    {w.video ? (
+                      <video
+                        src={w.video}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                    ) : (
+                      <>
+                        <div className={`absolute inset-0 bg-gradient-to-br ${
+                          i === 0 ? "from-zinc-700 to-zinc-900" :
+                          i === 1 ? "from-amber-900/40 to-zinc-900" :
+                          "from-zinc-800 to-black"
+                        } group-hover:scale-105 transition-transform duration-700`} />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <Film className="h-10 w-10 text-foreground/30" strokeWidth={1.2} />
+                        </div>
+                      </>
+                    )}
                   </div>
                   <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-2">{w.tag}</p>
                   <h3 className="font-serif-display text-2xl group-hover:italic transition-all">{w.title}</h3>
