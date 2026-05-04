@@ -24,6 +24,7 @@ const work = [
   { tag: "Motion · Pride Reel", title: "Regional Pride Animations", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922276/05_-_Purbi_Podcast_-_Regional_Pride_Map_Animations_fhwlkm.mp4" },
   { tag: "Edu-Tech · Commercial", title: "EduCollege AI Monster", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922220/EduCollege_Ai_video_monster_cip5iw.mp4" },
   { tag: "Podcast · Production", title: "Employment & Scaling", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922320/02_-_Purbi_Podcast_-_Employment_and_Scaling_g6iku5.mp4" },
+  { tag: "Cinematic · Brand Reel", title: "JP Brand Film", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777923843/Short_for_GL_Studios_Website_JP_New_year_riedrm.mp4" },
 ];
 
 const Home = () => {
@@ -57,7 +58,7 @@ const Home = () => {
             transition={{ duration: 0.9, ease: [0.65, 0, 0.35, 1] }}
             className="font-serif-display text-5xl sm:text-6xl md:text-8xl lg:text-[8.5rem] leading-[0.98] tracking-tight max-w-6xl"
           >
-            Cinematic <em>Storytelling.</em><br />
+            Cinematic Storytelling.<br />
             Measurable Growth.
           </motion.h1>
 
@@ -171,10 +172,10 @@ const Home = () => {
               <div>
                 <p className="eyebrow mb-6">Selected work</p>
                 <h2 className="font-serif-display text-4xl md:text-6xl leading-[1.05]">
-                  A glimpse <em>behind</em> the lens.
+                  A glimpse behind the lens.
                 </h2>
               </div>
-              <Link to="/portfolio" className="text-sm link-underline">All projects →</Link>
+              <Link to="/portfolio" className="text-sm link-underline">All Work →</Link>
             </div>
           </Reveal>
 
@@ -182,7 +183,7 @@ const Home = () => {
             {work.map((w, i) => (
               <Reveal key={i} delay={i * 0.1}>
                 <Link to="/portfolio" className="group block">
-                  <div className="aspect-[3/4] surface-soft rounded-sm overflow-hidden relative mb-4 border border-border">
+                  <div className="aspect-[3/4] surface-soft rounded-[var(--radius)] overflow-hidden relative mb-4 border border-border">
                     {w.video ? (
                       <video
                         src={w.video}
@@ -206,7 +207,7 @@ const Home = () => {
                     )}
                   </div>
                   <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-2">{w.tag}</p>
-                  <h3 className="font-serif-display text-2xl group-hover:italic transition-all">{w.title}</h3>
+                  <h3 className="font-serif-display text-2xl transition-all">{w.title}</h3>
                 </Link>
               </Reveal>
             ))}

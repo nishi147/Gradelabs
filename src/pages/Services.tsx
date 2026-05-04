@@ -119,7 +119,7 @@ const Services = () => {
               </div>
               <div className="md:col-span-8">
                 <h2 className="font-serif-display text-4xl md:text-6xl leading-[1.05]">
-                  A four-step <em>creative</em> rhythm.
+                  A four-step creative rhythm.
                 </h2>
               </div>
             </div>
@@ -154,7 +154,7 @@ const Services = () => {
               </div>
               <div className="md:col-span-8">
                 <h2 className="font-serif-display text-4xl md:text-6xl leading-[1.05]">
-                  Why founders <em>pick us.</em>
+                  Why founders pick us.
                 </h2>
               </div>
             </div>

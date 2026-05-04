@@ -24,7 +24,7 @@ const About = () => {
           <Reveal>
             <p className="eyebrow mb-8">The GradeLab Philosophy</p>
             <h1 className="font-serif-display text-5xl md:text-7xl lg:text-8xl leading-[1.02] max-w-5xl">
-              Beautiful visuals should <em>drive measurable growth.</em>
+              Beautiful visuals should drive measurable growth.
             </h1>
             <p className="mt-10 text-lg text-muted-foreground max-w-2xl leading-relaxed">
               GradeLab Studios was founded on a simple principle: beautiful visuals should drive measurable growth. Operating as an independent, highly specialized studio, we avoid cookie-cutter templates and bloated agency processes. Whether we are engineering precision color grades for a commercial shoot, executing targeted Google Ad campaigns, or developing a seamless web presence, our goal remains the same: we build digital identities that perform.
@@ -40,7 +40,7 @@ const About = () => {
             <div>
               <p className="eyebrow mb-6">Vision</p>
               <h3 className="font-serif-display text-3xl md:text-5xl leading-tight mb-5">
-                Make great craft <em>profitable.</em>
+                Make great craft profitable.
               </h3>
               <p className="text-muted-foreground leading-relaxed max-w-md">
                 Cinematic quality shouldn't be a luxury — it should be the most efficient
@@ -52,7 +52,7 @@ const About = () => {
             <div>
               <p className="eyebrow mb-6">Mission</p>
               <h3 className="font-serif-display text-3xl md:text-5xl leading-tight mb-5">
-                Build cohesive <em>digital presences.</em>
+                Build cohesive digital presences.
               </h3>
               <p className="text-muted-foreground leading-relaxed max-w-md">
                 Every brand we touch should look sharper, feel more considered, and convert
@@ -68,7 +68,7 @@ const About = () => {
         <div className="container">
           <Reveal>
             <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-center">
-              <div className="aspect-[4/5] bg-gradient-to-br from-zinc-700 to-zinc-900 rounded-sm border border-border" />
+              <div className="aspect-[4/5] bg-gradient-to-br from-zinc-700 to-zinc-900 rounded-[var(--radius)] border border-border" />
               <div>
                 <p className="eyebrow mb-6">Founder & Director</p>
                 <h3 className="font-serif-display text-4xl md:text-6xl leading-tight mb-6">Ayush Mahato</h3>
@@ -122,7 +122,7 @@ const About = () => {
               </div>
               <div className="md:col-span-8">
                 <h2 className="font-serif-display text-4xl md:text-6xl leading-[1.05]">
-                  Built different. <em>On purpose.</em>
+                  Built different. On purpose.
                 </h2>
               </div>
             </div>
@@ -146,7 +146,7 @@ const About = () => {
         <div className="container">
           <Reveal>
             <h2 className="font-serif-display text-4xl md:text-7xl leading-[1.05] max-w-4xl">
-              Let's build something <em>worth watching.</em>
+              Let's build something worth watching.
             </h2>
             <Link to="/contact" className="btn-primary mt-10">
               Explore a Partnership <ArrowUpRight className="h-4 w-4" />

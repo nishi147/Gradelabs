@@ -42,6 +42,13 @@ const projects: { title: string; cat: Exclude<Cat, "all">; desc: string; icon?: 
     video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922068/UGC_Tsuyosa_REEL_trg0qp.mp4",
     tone: "from-amber-900/40 to-zinc-900"
   },
+  { 
+    title: "Cinematic Brand Reel", 
+    cat: "cinematic", 
+    desc: "Dynamic brand storytelling featuring high-energy editing and precision color grading.", 
+    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777923843/Short_for_GL_Studios_Website_JP_New_year_riedrm.mp4",
+    tone: "from-zinc-900 to-black"
+  },
 ];
 
 const filters: { id: Cat; label: string }[] = [
@@ -62,7 +69,7 @@ const Portfolio = () => {
           <Reveal>
             <p className="eyebrow mb-8">Selected Work</p>
             <h1 className="font-serif-display text-5xl md:text-7xl lg:text-8xl leading-[1.02] max-w-5xl">
-              A library of <em>visual</em> case studies.
+              A library of visual case studies.
             </h1>
             <p className="mt-10 text-lg text-muted-foreground max-w-2xl leading-relaxed">
               Real projects across real estate, e-commerce and cinematic product work —
@@ -106,7 +113,7 @@ const Portfolio = () => {
                   className="group cursor-pointer"
                 >
                   {/* Visual placeholder */}
-                  <div className={`relative aspect-[4/5] bg-gradient-to-br ${p.tone} overflow-hidden rounded-sm mb-4 border border-border`}>
+                  <div className={`relative aspect-[4/5] bg-gradient-to-br ${p.tone} overflow-hidden rounded-[var(--radius)] mb-4 border border-border`}>
                     {p.video ? (
                       <video
                         src={p.video}
@@ -117,13 +124,9 @@ const Portfolio = () => {
                         className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       />
                     ) : (
-                      <motion.div
-                        className="absolute inset-0 flex items-center justify-center"
-                        whileHover={{ scale: 1.04 }}
-                        transition={{ duration: 0.7 }}
-                      >
-                        {p.icon && <p.icon className="h-12 w-12 text-foreground/40" strokeWidth={1.2} />}
-                      </motion.div>
+                      <div className="absolute inset-0 flex items-center justify-center opacity-40">
+                        <Film className="h-12 w-12" strokeWidth={1.2} />
+                      </div>
                     )}
                     {/* Hover overlay */}
                     <div className="absolute inset-0 bg-foreground/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
@@ -138,7 +141,7 @@ const Portfolio = () => {
                   <div className="flex items-start justify-between">
                     <div>
                       <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-1">{filters.find(f => f.id === p.cat)?.label}</p>
-                      <h3 className="font-serif-display text-xl group-hover:italic transition-all">{p.title}</h3>
+                      <h3 className="font-serif-display text-xl transition-all">{p.title}</h3>
                     </div>
                     <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors mt-1" />
                   </div>
@@ -149,37 +152,13 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* SHOWREEL */}
-      <section className="py-32">
-        <div className="container">
-          <Reveal>
-            <div className="relative aspect-[16/9] overflow-hidden rounded-sm group cursor-pointer surface-soft border border-border">
-              <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative">
-                  <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                    <Play className="h-7 w-7 text-primary-foreground ml-1" fill="currentColor" />
-                  </div>
-                </div>
-              </div>
-              <div className="absolute bottom-8 left-8 right-8 flex items-end justify-between text-background">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.18em] opacity-70 mb-2">Showreel · 2025</p>
-                  <h3 className="font-serif-display text-3xl md:text-4xl">A year behind the lens</h3>
-                </div>
-                <span className="hidden md:inline border border-background/30 px-4 py-2 rounded-full text-xs">02:34</span>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="py-32 surface-soft">
         <div className="container">
           <Reveal>
             <h2 className="font-serif-display text-4xl md:text-7xl leading-[1.05] max-w-4xl">
-              Your project could be <em>next.</em>
+              Your project could be next.
             </h2>
             <p className="mt-6 text-muted-foreground max-w-md">
               We take on a small number of new clients each quarter to keep craft at the highest level.

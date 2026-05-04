@@ -37,7 +37,7 @@
     --input: 0 0% 12%;
     --ring: 76 88% 58%;
 
-    --radius: 9999px;
+    --radius: 24px;
 
     /* Surfaces */
     --surface-soft: 0 0% 9%;
@@ -80,9 +80,9 @@
     font-weight: 500;
   }
   .font-serif-display {
-    font-family: 'Instrument Serif', Georgia, serif;
-    font-weight: 400;
-    letter-spacing: -0.01em;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.04em;
   }
   ::selection {
     background: hsl(var(--foreground));
