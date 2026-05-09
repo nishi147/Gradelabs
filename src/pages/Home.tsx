@@ -119,7 +119,7 @@ const Home = () => {
         </div>
         <div className="relative overflow-hidden">
           <div className="flex marquee gap-16 whitespace-nowrap">
-            {[..."NORTHWIND·LUMERA·AETHERWAVE·HILLTOP·OBSIDIAN·HELIX·KINETIC·VANTAGE·NORTHWIND·LUMERA·AETHERWAVE·HILLTOP·OBSIDIAN·HELIX·KINETIC·VANTAGE".split("·")].map((b, i) => (
+            {[..."THE DASH MEDIA·NEXCORE TECHNOLOGIES·ASTRIX·NORTHWIND·LUMERA·AETHERWAVE·HILLTOP·OBSIDIAN·HELIX·KINETIC·VANTAGE·NORTHWIND·LUMERA·AETHERWAVE·HILLTOP·OBSIDIAN·HELIX·KINETIC·VANTAGE".split("·")].map((b, i) => (
               <span key={i} className="font-serif-display text-2xl md:text-3xl text-muted-foreground/60">{b}</span>
             ))}
           </div>
