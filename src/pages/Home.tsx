@@ -19,12 +19,11 @@ const testimonials = [
 ];
 
 const work = [
-  { tag: "Podcast · Storytelling", title: "The 400 Roti Startup", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922369/01_-_Purbi_Podcast_-_The_400_Roti_Startup_tidhon.mp4" },
-  { tag: "DTC · UGC Reel", title: "Tsuyosa Skincare", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922068/UGC_Tsuyosa_REEL_trg0qp.mp4" },
-  { tag: "Motion · Pride Reel", title: "Regional Pride Animations", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922276/05_-_Purbi_Podcast_-_Regional_Pride_Map_Animations_fhwlkm.mp4" },
+  { tag: "Short-form · Content", title: "Week 1st_video", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358223/Week_1_1st_video_colour_graded_final_okbfr1.mp4" },
+  { tag: "Cinematic · Launch", title: "WearESO Launch", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358357/WearESO_Launch_zytmkp.mp4" },
   { tag: "Edu-Tech · Commercial", title: "EduCollege AI Monster", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922220/EduCollege_Ai_video_monster_cip5iw.mp4" },
-  { tag: "Podcast · Production", title: "Employment & Scaling", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922320/02_-_Purbi_Podcast_-_Employment_and_Scaling_g6iku5.mp4" },
-  { tag: "Cinematic · Brand Reel", title: "JP Brand Film", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777923843/Short_for_GL_Studios_Website_JP_New_year_riedrm.mp4" },
+  { tag: "E-commerce · Campaign", title: "Christmas in Hiroshima", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358743/Christmas_In_Hiroshima_kowfsx.mp4" },
+  { tag: "Cinematic · Brand Reel", title: "Cinematic Brand Reel", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777923843/Short_for_GL_Studios_Website_JP_New_year_riedrm.mp4" },
 ];
 
 const Home = () => {

@@ -8,25 +8,23 @@ type Cat = "all" | "ecommerce" | "cinematic" | "short-form";
 
 const projects: { title: string; cat: Exclude<Cat, "all">; desc: string; icon?: any; tone?: string; video?: string }[] = [
   { 
-    title: "The 400 Roti Startup", 
+    title: "Week 1st_video", 
     cat: "short-form", 
-    desc: "Strategic podcast production for Purbi Podcast, focused on storytelling and high-retention editing.", 
-    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922369/01_-_Purbi_Podcast_-_The_400_Roti_Startup_tidhon.mp4",
-    tone: "from-zinc-800 to-black"
+    desc: "Dynamic short-form content creation for a high-profile client, showcasing versatile editing styles and engaging storytelling.", 
+    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358223/Week_1_1st_video_colour_graded_final_okbfr1.mp4"
   },
+  // { 
+  //   title: "Employment & Scaling", 
+  //   cat: "short-form", 
+  //   desc: "Deep-dive podcast episode management with professional audio mixing and multicam grading.", 
+  //   video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922320/02_-_Purbi_Podcast_-_Employment_and_Scaling_g6iku5.mp4",
+  //   tone: "from-zinc-700 to-zinc-900"
+  // },
   { 
-    title: "Employment & Scaling", 
-    cat: "short-form", 
-    desc: "Deep-dive podcast episode management with professional audio mixing and multicam grading.", 
-    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922320/02_-_Purbi_Podcast_-_Employment_and_Scaling_g6iku5.mp4",
-    tone: "from-zinc-700 to-zinc-900"
-  },
-  { 
-    title: "Regional Pride Animations", 
+    title: "WearESO Launch", 
     cat: "cinematic", 
-    desc: "Custom map animations and motion graphics for regional storytelling.", 
-    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922276/05_-_Purbi_Podcast_-_Regional_Pride_Map_Animations_fhwlkm.mp4",
-    tone: "from-sky-900/40 to-zinc-900"
+    desc: "Cinematic launch video for WearESO, showcasing high-end fashion with dynamic editing and rich color grading.", 
+    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358357/WearESO_Launch_zytmkp.mp4"
   },
   { 
     title: "EduCollege AI Monster", 
@@ -36,10 +34,10 @@ const projects: { title: string; cat: Exclude<Cat, "all">; desc: string; icon?: 
     tone: "from-zinc-800 to-black"
   },
   { 
-    title: "Tsuyosa UGC Reel", 
+    title: "Christmas in Hiroshima", 
     cat: "ecommerce", 
-    desc: "High-converting UGC short-form content for global DTC brands.", 
-    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922068/UGC_Tsuyosa_REEL_trg0qp.mp4",
+    desc: "Seasonal campaign video for a Japanese e-commerce brand, blending cinematic storytelling with festive visuals.", 
+    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358743/Christmas_In_Hiroshima_kowfsx.mp4",
     tone: "from-amber-900/40 to-zinc-900"
   },
   { 
